@@ -1,0 +1,121 @@
+﻿<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="shippingApp">
+<head>
+	<meta charset="utf-8">
+	<!-- bootstrap -->
+	<link href="content/css/bootstrap-4.3.1.min.css" rel="stylesheet" />
+	<link href="content/css/fontawesome.css" rel="stylesheet" />
+	<link href="content/css/switch.css" rel="stylesheet" />
+	<link href="content/css/site.css" rel="stylesheet" />
+
+	<script src="content/Js/jquery-3.3.1.slim.min.js"></script>
+	<script src="content/Js/bootstrap-4.3.1.min.js"></script>
+	<script src="content/js/popper.min.js"></script>
+
+
+	<script src="content/js/fontawesome.js"></script>
+	<!-- AngularJS -->
+	<script src="content/js/angular-1.7.8.js"></script>
+	<script src="content/js/angular-route.js"></script>
+
+	<!-- App and Controllers -->
+	<script src="app/app.js"></script>
+	<script src="app/controllers/MenuController.js"></script>
+	<script src="app/controllers/ShippingController.js"></script>
+
+	<script src="app/controllers/MessageController.js"></script>
+	<script src="app/controllers/MyAccountController.js"></script>
+	<script src="app/controllers/SettingsController.js"></script>
+	<script src="app/controllers/ShippingController.js"></script>
+	<script src="app/controllers/WishlistController.js"></script>
+	<base href="/">
+</head>
+
+<body>
+	
+	<div class="row">
+		<div class="col-lg-2">
+			<img src="content/images/logo.png" />
+
+			<div class="col-lg-12 lateral-menu">
+
+				<div class="col-lg-12 text-align-center text-color-grey-ligth">
+					<i class="far fa-lightbulb"></i>
+					Smart Filters
+				</div>
+
+				<div class="division"></div>
+
+
+				<div class="col-lg-12 font-size-25pt bg-gray">
+
+
+					<div class="col-lg-12 space-zero">
+						<i class="fas fa-calendar-day"></i>
+						<label class="switch switch-lg switch-3d switch-primary switch-menu">
+							<input type="checkbox" class="switch-input" />
+							<span class="switch-label"></span>
+							<span class="switch-handle"></span>
+						</label>
+					</div>
+
+					<div class="col-lg-12 space-zero">
+						<i class="far fa-heart marging-right-20"></i>
+						<label class="switch switch-lg switch-3d switch-menu">
+							<input type="checkbox" class="switch-input" />
+							<span class="switch-label"></span>
+							<span class="switch-handle"></span>
+						</label>
+					</div>
+
+					<div class="col-lg-12 space-zero">
+						<i class="fas fa-shopping-cart"></i>
+						<label class="switch switch-lg switch-3d switch-menu">
+							<input type="checkbox" class="switch-input" />
+							<span class="switch-label"></span>
+							<span class="switch-handle"></span>
+						</label>
+					</div>
+
+				</div>
+
+				<div class="division"></div>
+
+				<div class="col-lg-12 text-align-center text-color-grey-ligth">
+					Status
+				</div>
+
+				<div class="col-lg-12 margin-top-15">
+					<div class="inner-addon-sm left-addon">
+						<i class="fas fa-search"></i>
+						<input type="text" class="form-control text-align-center" placeholder="Search" />
+					</div>
+
+				</div>
+
+				<div class="col-lg-12 margin-top-15">
+					<button type="button" class="btn btn-light btn-menu">DELIVERED</button>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="col-lg-10">
+
+			<div class="row margin-top-35">
+
+				<div class="col-lg-12" id="menu" ng-controller="MenuController as menuC"
+					 ng-include="menuC.template"></div>
+
+			</div>
+
+			<div ng-view></div>
+
+			
+		</div>
+	</div>
+
+</body>
+
+</html>

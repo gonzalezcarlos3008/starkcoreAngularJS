@@ -1,0 +1,74 @@
+﻿<div class="row" ng-controller="ShippingController as ShippinC">
+
+	<!-- Filter the travels -->
+	<div class="col-lg-12 txt-filter">
+
+		<div class="col-lg-1">
+			<i class="fas fa-check-circle fa-3x text-color-orange"></i>
+		</div>
+		<div class="col-lg-7"></div>
+		<div class="col-lg-4">
+
+
+			<div class="inner-addon left-addon">
+				<i class="fas fa-search"></i>
+				<input type="text" class="form-control" placeholder="Search" />
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-lg-1">
+		<i class="fas fa-check-circle fa-3x text-color-orange margin-check-box" ng-repeat="card in ShippinC.Travels track by $index"></i>
+	</div>
+
+	<div class="col-lg-11">
+
+		<!-- Card for travel information of package sended -->
+		<div class="col-lg-12 travel-card" ng-repeat="card in ShippinC.Travels track by $index">
+
+			<div class="row">
+
+				<div class="col-lg-2 content-travel-card">
+					{{card.Date}}
+				</div>
+
+				<div class="col-lg-4 content-travel-card">
+
+					<div class="col-lg-2 inline-block-display space-zero">
+						<i class="fas fa-location-arrow fa-2x travel-icon-location"></i>
+					</div>
+					<div class="col-lg-9 inline-block-display space-zero">
+						<span>{{card.Source}}</span><br />
+						<span><i class="fas fa-chevron-down font-size-25pt text-color-orange"></i></span><br />
+						<span>{{card.Destiny}}</span><br />
+					</div>
+				</div>
+
+				<div class="col-lg-6 content-travel-card">
+
+					<div class="col-lg-4 inline-block-display text-align-right">
+						<i class="fas fa-truck fa-flip-horizontal fa-4x"></i>
+					</div>
+
+					<div class="col-lg-8 inline-block-display">
+						<span class="travel-card-notification-diner">{{card.Value}}</span>
+						<div class="travel-card-notification-amount">
+							<span>1</span>
+						</div>
+						<i class="fas fa-ellipsis-v font-size-20px"></i>
+					</div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</div>
+<!-- Add travel Button -->
+<div class="col-lg-12 btn-add">
+	<i class="fas fa-plus-circle fa-4x text-color-orange"></i>
+</div>
